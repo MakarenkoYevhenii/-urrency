@@ -31,7 +31,6 @@ function App() {
         setData((prevState) => {
           return {
             ...prevState,
-            loading: false,
             error: error.message,
           };
         });
@@ -63,7 +62,6 @@ function App() {
   data.data.map(id=>{
       rate[id.cc]=id.rate
   });
-  console.log(rate);
   return (
     <>
       <HeaderMenu data={rate}></HeaderMenu>
