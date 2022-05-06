@@ -1,0 +1,7 @@
+.currencyItem{
+    list-style-type: none;
+}
+.cureencyList{
+    display: flex;
+    justify-content:space-around;
+}

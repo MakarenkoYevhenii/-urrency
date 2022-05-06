@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { actualCurrency } from "./shared/services/curencyExchange";
 
 function App() {
-  const [amount1, setAmount1] = useState(1);
-  const [amount2, setAmount2] = useState(1);
+  const [amount1, setAmount1] = useState(0);
+  const [amount2, setAmount2] = useState(0);
   const [currency1, setCurrency1] = useState("USD");
   const [currency2, setCurrency2] = useState("EUR");
   const rate={
