@@ -7,6 +7,6 @@ const instanse=axios.create({
 
 export async function actualCurrency() {
     const  {data}  = await instanse.get()
-  
+
     return data;}
   

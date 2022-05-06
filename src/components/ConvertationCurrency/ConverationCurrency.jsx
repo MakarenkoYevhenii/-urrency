@@ -2,25 +2,16 @@ import { useEffect, useState } from "react";
 
 
 const ConvertionCurrenc = (data) => {
- 
-  
-  const handleClicl=(e)=>{
-       console.log(e.target.value);
-   }
 
-  const options=data.data.map(id=>{
-      
-    return <option value={id.cc} key={id.cc}>{id.cc}</option>
+  const options=Object.keys(data.data).map(id=>{
+
+    return <option value={id} key={id}>{id}</option>
 })
 
   return (
     <>
-      <input type="number"   name="left" ></input>
-      <select name="currency" id="1" onClick={handleClicl}>
-      {options}
-      </select>
-      <input type="number"  name="right" ></input>
-      <select name="currency" id="2" onClick={handleClicl}>
+      <input type="number"   name="left" value={data.amount} onChange={ev => data.onAmountChange(ev.target.value)} ></input>
+      <select name="currency" id="1"value={data.currency} onChange={ev => data.onCurrencyChange(ev.target.value)} >
       {options}
       </select>
     </>
