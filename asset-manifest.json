@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/-urrency/static/css/main.e88a156a.css",
-    "main.js": "/-urrency/static/js/main.9e2b0757.js",
+    "main.css": "/-urrency/static/css/main.49bb5136.css",
+    "main.js": "/-urrency/static/js/main.5b92d872.js",
     "index.html": "/-urrency/index.html",
-    "main.e88a156a.css.map": "/-urrency/static/css/main.e88a156a.css.map",
-    "main.9e2b0757.js.map": "/-urrency/static/js/main.9e2b0757.js.map"
+    "main.49bb5136.css.map": "/-urrency/static/css/main.49bb5136.css.map",
+    "main.5b92d872.js.map": "/-urrency/static/js/main.5b92d872.js.map"
   },
   "entrypoints": [
-    "static/css/main.e88a156a.css",
-    "static/js/main.9e2b0757.js"
+    "static/css/main.49bb5136.css",
+    "static/js/main.5b92d872.js"
   ]
 }
