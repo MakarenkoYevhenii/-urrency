@@ -6,7 +6,7 @@ const HeaderMenu = (data) => {
    return <li className={style.currencyItem} key={id}>{id}:{data.data[id]}</li>
   })
 
-  return <ul className={style.cureencyList}>{names}</ul>;
+  return <ul className={style.currencyList}>{names}</ul>;
 };
 
 export default HeaderMenu;

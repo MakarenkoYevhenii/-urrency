@@ -1,6 +1,6 @@
 import "./App.css";
 import HeaderMenu from "./components/HeaderMenu/HeaderMenu";
-import ConvertionCurrenc from "./components/ConvertationCurrency/ConverationCurrency";
+import CurrencyConverter from "./components/ConvertationCurrency/ConverationCurrency";
 import { useEffect, useState } from "react";
 import { actualCurrency } from "./shared/services/curencyExchange";
 
@@ -39,23 +39,23 @@ function App() {
     fetchCurrency();
   }, []); 
   
-  function handleAmount1Change(amount1) {
+  function handleAmountPrimaryChange(amount1) {
 
     setAmount2((amount1 * rate[currency1]) / rate[currency2]);
     setAmount1(amount1);
   }
 
-  function handleCurrency1Change(currency1) {
+  function handleCurrencyPrimaryChange(currency1) {
     setAmount2((amount1 * rate[currency1]) / rate[currency2]);
     setCurrency1(currency1);
   }
 
-  function handleAmount2Change(amount2) {
+  function handleAmountSecondChange(amount2) {
     setAmount1((amount2 * rate[currency2]) / rate[currency1]);
     setAmount2(amount2);
   }
 
-  function handleCurrency2Change(currency2) {
+  function handleCurrencySecondChange(currency2) {
     setAmount1((amount2 * rate[currency2]) / rate[currency1]);
     setCurrency2(currency2);
   }
@@ -64,22 +64,22 @@ function App() {
   });
   return (
     <>
-      <HeaderMenu data={rate}></HeaderMenu>
+      <HeaderMenu data={rate}/>
 
-      <ConvertionCurrenc
+      <CurrencyConverter
         data={rate}
         amount={amount1}
         currency={currency1}
-        onCurrencyChange={handleCurrency1Change}
-        onAmountChange={handleAmount1Change}
-      ></ConvertionCurrenc>
-      <ConvertionCurrenc
+        onCurrencyChange={handleCurrencyPrimaryChange}
+        onAmountChange={handleAmountPrimaryChange}
+      />
+      <CurrencyConverter
         data={rate}
         amount={amount2}
         currency={currency2}
-        onCurrencyChange={handleCurrency2Change}
-        onAmountChange={handleAmount2Change}
-      ></ConvertionCurrenc>
+        onCurrencyChange={handleCurrencySecondChange}
+        onAmountChange={handleAmountSecondChange}
+      />
     </>
   );
 }

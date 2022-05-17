@@ -1,7 +1,7 @@
 import style from "./ConverationCurrency.module.css"
 
 
-const ConvertionCurrenc = (data) => {
+const CurrencyConverter = (data) => {
  
   const options=Object.keys(data.data).map(id=>{
     
@@ -20,4 +20,4 @@ const ConvertionCurrenc = (data) => {
   );
 };
 
-export default ConvertionCurrenc;
+export default CurrencyConverter;
